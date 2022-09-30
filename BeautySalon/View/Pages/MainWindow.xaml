@@ -1,0 +1,36 @@
+﻿<Window x:Class="BeautyShop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BeautyShop"
+        mc:Ignorable="d"
+        Title="Главное меню" Height="700" Width="1100" MinHeight="300" MinWidth="1100">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30*" MinHeight="60" MaxHeight="90"/>
+            <RowDefinition Height="200*"/>
+        </Grid.RowDefinitions>
+        <WrapPanel Grid.Row="0" Background="#FFE1E4FF" Orientation="Horizontal" Width="Auto">
+            <Image Source="/Resources/beauty_logo.png"
+                   Width="97" HorizontalAlignment="Left"
+                   Margin="5 0 0 0" Height="86"/>
+        </WrapPanel>
+
+        <Button x:Name="backBtn" Click="backBtn_Click"
+                    Width="150" FontFamily="Tahoma" FontSize="17"
+                    Foreground="White" Background="#FFFF4A6D" 
+                    HorizontalAlignment="Left" Margin="910,10,0,18">Выход</Button>
+
+        <Button x:Name="faqBtn" Click="faqBtn_Click"
+                    Margin="0,10,221,18" Width="150" Background="#FFFF4A6D" 
+                    FontFamily="Tahoma" FontSize="17"
+                    Foreground="White" HorizontalAlignment="Right">FAQ</Button>
+
+        <StackPanel Grid.Row="1" VerticalAlignment="Center" >
+            <Image Source="/Resources/beauty_logo.png" 
+                   Width="500" Opacity=".1"/>
+        </StackPanel>
+        <Frame x:Name="mainFrm" Grid.Row="1" NavigationUIVisibility="Hidden" Foreground="#FFD6B8B8"/>
+    </Grid>
+</Window>
